@@ -1,0 +1,58 @@
+# EXELMJ packaging config (NSIS installer for Windows).
+# App icon lands in milestone 5 (resources/icon.ico) — default Electron icon until then.
+appId: com.mj.exelmj
+productName: EXELMJ
+# Reuse the already-downloaded Electron runtime instead of download+extract+rename
+# (the extract-rename path trips over antivirus scans of fresh executables).
+electronDist: node_modules/electron/dist
+directories:
+  output: release
+files:
+  - dist/**
+  - dist-electron/**
+  - package.json
+win:
+  icon: resources/icon.ico
+  target:
+    - nsis
+# Register EXELMJ as a handler for the formats we can actually open, so it
+# appears in Windows "Open with" (and gets the app icon). We deliberately omit
+# the old binary .xls (exceljs can't read it). Windows won't silently steal the
+# default association — the user picks EXELMJ from the list / the one-time prompt.
+fileAssociations:
+  - ext: xlsx
+    name: Excel Workbook
+    description: EXELMJ Spreadsheet
+    icon: resources/icon.ico
+    role: Editor
+  - ext: xlsm
+    name: Excel Macro-Enabled Workbook
+    description: EXELMJ Spreadsheet
+    icon: resources/icon.ico
+    role: Editor
+  - ext: csv
+    name: CSV File
+    description: EXELMJ Spreadsheet
+    icon: resources/icon.ico
+    role: Editor
+  - ext: docx
+    name: Word Document
+    description: EXELMJ Document
+    icon: resources/icon.ico
+    role: Editor
+  - ext: ai
+    name: Adobe Illustrator Artwork
+    description: EXELMJ Design
+    icon: resources/icon.ico
+    role: Editor
+  - ext: svg
+    name: SVG Image
+    description: EXELMJ Design
+    icon: resources/icon.ico
+    role: Editor
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: EXELMJ

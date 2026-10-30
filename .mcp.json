@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "exelmj-studio": {
+      "command": "node",
+      "args": ["./dist-electron/mcp-shim.mjs"]
+    }
+  }
+}

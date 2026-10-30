@@ -1,0 +1,29 @@
+node_modules/
+dist/
+dist-electron/
+release/
+*.log
+
+# أسرار ومفاتيح — لا تُرفع أبداً
+مفتاح*.txt
+*.key
+*.pem
+*.pfx
+*.p12
+.env
+.env.*
+
+# ملفات مؤقتة ونسخ احتياطية ومخرجات مولّدة
+.build-temp/
+backups/
+graphify-out/
+cairo.tgz
+
+# ذاكرة أدوات الذكاء الاصطناعي وملاحظات الجلسات (فيها بيانات شخصية)
+.cursor_file_memory.json
+.smart_*.json
+Session-Notes.md
+docs/web-edition-plan.md
+
+# لقطات شاشة من الاختبارات الحية
+scripts/*.png

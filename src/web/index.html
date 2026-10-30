@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- resizes-content: the Android keyboard shrinks the page instead of
+         covering it, so a cell being edited stays in view. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content"
+    />
+    <meta name="theme-color" content="#1e7145" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+    <title>EXELMJ</title>
+    <style>
+      html,
+      body,
+      #app,
+      #word-app {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      body {
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        overscroll-behavior: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* The documents container starts hidden; the mode pill flips it. */
+      #word-app {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: #f2f4f7;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="word-app"></div>
+    <script type="module" src="./entry.ts"></script>
+  </body>
+</html>
