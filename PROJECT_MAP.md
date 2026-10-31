@@ -2874,3 +2874,4 @@ text), defined names, native charts (EXELMJ charts persist in a veryHidden
   chrome only); paste from real Excel arrives via HTML clipboard (basic styles).
 
 - Project cover: README.md displays docs/cover.png (user supplied image).
+- Public distribution: README.md links to the Windows x64 NSIS installer on GitHub Releases; release artifacts are built into the ignored release/ directory. Installer remains unsigned.
