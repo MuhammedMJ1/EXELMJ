@@ -2872,3 +2872,5 @@ text), defined names, native charts (EXELMJ charts persist in a veryHidden
   signing cert out of scope v1).
 - Known upstream limits: grid content stays LTR in Arabic UI (Univer RTL covers
   chrome only); paste from real Excel arrives via HTML clipboard (basic styles).
+
+- Project cover: README.md displays docs/cover.png (user supplied image).
